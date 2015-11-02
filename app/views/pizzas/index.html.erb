@@ -2,7 +2,7 @@
 
 <h1>Listing Pizzas</h1>
 
-<table class="table">
+<table class="table table-striped table-nonfluid"> 
   <thead>
     <tr>
       <th>Name</th>
@@ -18,9 +18,9 @@
         <td><%= pizza.name %></td>
         <td><%= pizza.description %></td>
         <td><%= pizza.price %></td>
-        <td><%= link_to 'Show', pizza %></td>
-        <td><%= link_to 'Edit', edit_pizza_path(pizza) %></td>
-        <td><%= link_to 'Destroy', pizza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Show', pizza %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Edit', edit_pizza_path(pizza) %></td>
+        <td class="btn btn-danger pull-right btn-sm"><%= link_to 'Destroy', pizza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Pizza', new_pizza_path, class: "btn btn-primary" %>
+<%= link_to 'New Pizza', new_pizza_path, class: "btn btn-success btn-lg" %>
